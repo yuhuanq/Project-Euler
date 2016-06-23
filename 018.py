@@ -5,6 +5,10 @@
 import time
 start = time.time()
 
+####################################
+# Inputting Data
+####################################
+
 raw_data= """
 75
 95 64
@@ -29,10 +33,18 @@ del new_a[0]
 del new_a[-1]
 
 new_a=[map(int,k) for k in new_a]    
-sum=0
+
+
+####################################
+# Working from bottom to up
+''' By Working bottom up you avoid having to try every possible path. As the sums
+converge up toward the top of the triangle, it eventually becomes clear which 'path'
+to take.'''
+# Worst Case O(n^2)
+####################################
 
 new_a.reverse()
-
+sum=0
 for k in range(len(new_a)):
     i=0
     while i+1<len(new_a[k]):
@@ -41,5 +53,4 @@ for k in range(len(new_a)):
         i+=1
 
 print new_a[-1][0]
-
 print 'It took', time.time()-start, 'seconds.'
