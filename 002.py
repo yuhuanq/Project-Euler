@@ -13,6 +13,10 @@ def prime_factors(n):
       factors.append(d)
       n/=d
     d+=1
+    #prime factors are at most sqrt(n)
+    if d**2 > n:
+      factors.append(n)
+      break
   return factors
 
 print max(prime_factors(600851475143))
