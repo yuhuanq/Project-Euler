@@ -2,8 +2,8 @@
 
 #https://projecteuler.net/problem=18
 
-from datetime import datetime
-startTime = datetime.now()
+import time
+start = time.time()
 
 raw_data= """
 75
@@ -42,4 +42,4 @@ for k in range(len(new_a)):
 
 print new_a[-1][0]
 
-print datetime.now() - startTime
+print 'It took', time.time()-start, 'seconds.'
