@@ -1,5 +1,7 @@
 #!/bin/usr/env python
 
+#https://projecteuler.net/problem=18
+
 raw_data= """
 75
 95 64
