@@ -2,6 +2,9 @@
 
 #https://projecteuler.net/problem=18
 
+from datetime import datetime
+startTime = datetime.now()
+
 raw_data= """
 75
 95 64
@@ -38,3 +41,5 @@ for k in range(len(new_a)):
         i+=1
 
 print new_a[-1][0]
+
+print datetime.now() - startTime
